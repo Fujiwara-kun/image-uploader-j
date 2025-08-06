@@ -1,0 +1,8 @@
+<h1>アップロード完了</h1>
+
+<% if @image.file.attached? %>
+  <p>画像URL: <%= url_for(@image.file) %></p>
+  <%= image_tag @image.file %>
+<% else %>
+  <p>画像が添付されていません</p>
+<% end %>
